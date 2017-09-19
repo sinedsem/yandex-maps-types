@@ -2369,7 +2369,7 @@ declare namespace ymaps {
         constructor(geometry: number[] | IPointGeometry, properties: IPlacemarkProperties, options?: IPlacemarkOptions)
     }
 
-    interface IPlacemarkProperties extends IDataManager {
+    interface IPlacemarkProperties {
         iconCaption?: string;
     }
 
