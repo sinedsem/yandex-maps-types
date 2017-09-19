@@ -2,7 +2,7 @@
 // TypeScript Version: 2.4
 
 declare namespace ymaps {
-    interface IClassConstructor<T> {
+    export interface IClassConstructor<T> {
         new (): T;
     }
 
@@ -2416,6 +2416,15 @@ declare namespace ymaps {
 
     export function ready(successCallback?: () => any | IReadyobject, errorCallback?: () => any, context?: object): Promise<void>;
 
+    export function geocode(coords: number[]): Promise<any>;
+
+    export namespace geolocation {
+        export function get(): Promise<any>;
+    }
+
+    // export function (coords: number[]): Promise<any>;
+
+
     interface IReadyobject {
         require?: string[];
         context?: object;
@@ -2454,6 +2463,10 @@ declare namespace ymaps {
             get(key: string | object): object | string;
 
             remove(key: string): object;
+        }
+
+        export namespace bounds {
+            export function getCenterAndZoom(bounds: any, sizes: number[])//todo rename sizes
         }
     }
 
@@ -2553,7 +2566,7 @@ declare namespace ymaps {
     }
 
     export interface IDataManager extends IEventEmitter {
-        get(path: string, defaultValue: object): object;
+        get(path: string, defaultValue: object): any;
     }
 
     export interface IDomEventEmitter extends IEventEmitter { //tslint:disable-line no-empty-interface no-empty-interfaces
