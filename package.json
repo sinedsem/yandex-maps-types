@@ -1,0 +1,12 @@
+{
+  "name": "@types/yandex-maps",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinedsem/yandex-maps-types.git"
+  },
+  "scripts": {
+  },
+  "main": "index.d.ts",
+  "license": "MIT"
+}
