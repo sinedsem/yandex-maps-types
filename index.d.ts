@@ -2366,7 +2366,11 @@ declare namespace ymaps {
     }
 
     export class Placemark extends GeoObject {
-        constructor(geometry: number[] | object | IPointGeometry, properties: object | IDataManager, options?: IPlacemarkOptions)
+        constructor(geometry: number[] | IPointGeometry, properties: IPlacemarkProperties, options?: IPlacemarkOptions)
+    }
+
+    interface IPlacemarkProperties extends IDataManager {
+        iconCaption?: string;
     }
 
     interface IPlacemarkOptions {
